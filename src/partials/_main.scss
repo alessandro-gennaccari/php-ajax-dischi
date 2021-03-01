@@ -1,0 +1,52 @@
+main {
+    background-color: $colorDarkGray;
+    @include container;
+    .list {
+        @include flex($justify:flex-start);
+        flex-wrap: wrap;
+        .card {
+            position: relative;
+            border-radius: 20px;
+            margin: 2%;
+            flex-basis: 21%;
+            background-color: $colorBlack;
+            @include flex($direction:column);
+            &:hover .layover {
+                display: $dBlock;
+                cursor: pointer;
+            }
+            .layover {
+                background-color: $colorBlackTrasparent;
+                width: $widthMax;
+                height: $heightMax;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 20px;
+                display: $dNone;
+                i {
+                    color: $colorWhite;
+                    font-size: 60px;
+                    position: absolute;
+                    top: 22%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .cover {
+                img {
+                    width: $widthMax;
+                }
+            }
+            .info {
+                @include flex($direction:column);
+                color: $colorWhite;
+                text-align: center;
+                span {
+                    color: $colorLightGray;
+                }
+
+            }
+        }
+    }
+}
