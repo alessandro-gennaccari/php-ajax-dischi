@@ -1,0 +1,9 @@
+header {
+    height: $heightHeader;
+    background-color: $colorBlack;
+    @include container;
+        img {
+            height: 50px;
+        }
+
+}

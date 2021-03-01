@@ -1,0 +1,13 @@
+// Margin
+@for $i from 1 through 10 {
+    .margin-top-#{$i * 5} {
+        margin-top: 5px * $i;
+    }
+}
+
+// padding 
+@for $i from 1 through 10 {
+    .padding-#{$i * 5} {
+        padding: 5px * $i;
+    }
+}
