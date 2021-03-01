@@ -33,7 +33,7 @@
                         <i class="far fa-play-circle"></i>
                     </div>
                     <div class="cover">
-                        <img src="<?php echo $music['poster']?>" alt="">
+                        <img src="<?php echo $music['poster']?>" alt="Cover">
                     </div>
                     <div class="info margin-top-50">
                         <h3><?php echo $music['title']?></h3>
