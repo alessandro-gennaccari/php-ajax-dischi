@@ -7,7 +7,49 @@
   \***********************/
 /***/ (() => {
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    array: [],
+    types: [],
+    selected: 'All'
+  },
+  methods: {
+    filterType: function filterType() {
+      var _this = this;
 
+      this.array.forEach(function (element) {
+        if (!_this.types.includes(element.genre)) {
+          _this.types.push(element.genre);
+        }
+      });
+    },
+    filterGenre: function filterGenre() {
+      var _this2 = this;
+
+      axios.get('src/partials-php/server.php').then(function (result) {
+        var filtro = result.data;
+
+        if (_this2.selected != 'All') {
+          filtro = filtro.filter(function (element) {
+            return element.genre == _this2.selected;
+          });
+        }
+
+        _this2.array = filtro;
+      });
+    }
+  },
+  mounted: function mounted() {
+    var _this3 = this;
+
+    axios.get('src/partials-php/server.php').then(function (result) {
+      _this3.array = result.data;
+
+      _this3.filterType();
+    });
+  }
+});
 
 /***/ }),
 
