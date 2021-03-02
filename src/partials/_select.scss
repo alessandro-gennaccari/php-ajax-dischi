@@ -1,0 +1,12 @@
+main{
+    select {
+        border: none;
+        outline: none;
+        appearance: none;
+        border-radius: 0.25em;
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1.1;
+        background-color: $colorWhite;
+    }
+}

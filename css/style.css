@@ -85,6 +85,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: #353535;
+}
+
 header {
   height: 80px;
   background-color: black;
@@ -157,4 +161,17 @@ main .list .card .info {
 }
 main .list .card .info span {
   color: #aaaaaa;
+}
+
+main select {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.25em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: white;
 }
